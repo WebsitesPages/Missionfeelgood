@@ -450,7 +450,9 @@ display: none;
     font-size: 3em;
     color: #321d17;
 }
-
+.banner3 h2{
+    text-align: center;
+}
 .download-button {
     display: inline-block;
     background-color: #7c6767;

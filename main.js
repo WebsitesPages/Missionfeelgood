@@ -64,14 +64,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
 // Aktualisieren Sie Ihren Scroll-Event-Listener, um den neuen Header anzuzeigen/zu verbergen
 window.addEventListener('scroll', function () {
     let stickyHeader = document.getElementById('stickyHeader');
+    let menuIcon = stickyHeader.querySelector('.menu-icon');
     
     if (window.pageYOffset > 100) {
         stickyHeader.style.visibility = "visible";
         stickyHeader.style.opacity = "1";
+        menuIcon.classList.add('menu-icon-raised');  // Hinzufügen der Klasse
     } 
     else {
         stickyHeader.style.visibility = "hidden";
         stickyHeader.style.opacity = "0";
+        menuIcon.classList.remove('menu-icon-raised');  // Entfernen der Klasse
     }
 });
 
