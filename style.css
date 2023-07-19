@@ -238,7 +238,7 @@ display: none;
 
 
 .banner1{
-    min-height: 100vh;
+    min-height: 120vh;
     background-color: #ead8d3;
     display: flex;
     flex-direction: row;
@@ -248,7 +248,7 @@ display: none;
 }
 
 .banner1 img {
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .banner1 h1 {
@@ -257,7 +257,9 @@ display: none;
     text-align: left;
     color: #482a21;
 }
-
+.tc{
+    max-width: 80%;
+}
 .banner1 h2 {
     font-size: 1.5em;
     text-align: left;
@@ -270,7 +272,7 @@ display: none;
     color: #482a21;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .banner1 {
         flex-direction: column;
         justify-content: center;
@@ -290,9 +292,11 @@ display: none;
         font-size: 1.3em;
     }
     .banner1 img {
-        max-width: 80%;
+        max-width: 50%;
     }
-    
+    .tc{
+        all: unset;
+    }
 }
 
 @media (max-width: 600px) {
@@ -301,7 +305,7 @@ display: none;
         padding-bottom: 2rem;
     }
     .banner1 img {
-        max-width: 100%;
+        max-width: 70%;
     }
     .banner1 h2 {
         font-size: 1rem;
@@ -325,7 +329,7 @@ display: none;
     text-align: center;
     margin: 0;
     padding: 4rem 2rem 2rem 2rem;
-    font-size: 3em;
+    font-size: 2.7em;
     color: #321d17;
 }
 
@@ -600,3 +604,106 @@ footer{
     }
 
 }
+
+
+.containerabout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2em;
+    box-sizing: border-box;
+    background-color: #ead8d3;
+}
+
+.appointment-form {
+    width: 100%;
+    max-width: 500px;
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.appointment-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+    height: 3rem;  /* Add a height to the form group */
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #000;
+    height: 100%;  /* Make the input field take up the full height of the form group */
+}
+
+.form-group label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #ccc;
+    display: flex;  /* Use flexbox to center the text */
+    align-items: center;  /* Center the text vertically */
+}
+
+.form-group label span {
+    color: #aaa;
+    transition: transform 0.3s ease, font-size 0.3s ease;  /* Add a transition for the transform and font-size */
+}
+
+.form-group label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid transparent;  /* Make the line transparent by default */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease, border-color 0.3s ease;  /* Add a transition for the border color */
+}
+
+.form-group input:focus + label span, .form-group input:valid + label span {
+    transform: translateY(-50%);  /* Move the text up when the input field is focused or filled */
+    font-size: 14px;
+    color: #5fa8d3;
+}
+
+.form-group input:focus + label::after, .form-group input:valid + label::after {
+    transform: translateX(0%);
+    border-color: #5fa8d3;  /* Change the line color when the input field is focused or filled */
+}
+
+
+.form-group input:focus + label span, .form-group input:valid + label span {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #5fa8d3;
+}
+
+.appointment-form input[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    color: #fff;
+    background-color: #5fa8d3;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

@@ -81,6 +81,3 @@ window.addEventListener('scroll', function () {
 
 
 
-
-
-
