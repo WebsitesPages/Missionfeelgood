@@ -707,3 +707,47 @@ footer{
     cursor: pointer;
 }
 
+.new-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.new-section .text-content {
+    flex: 0.8;
+    padding-right: 2rem;
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+
+.new-section .image-content {
+    flex: 0.7;
+    text-align: right;
+
+}
+
+.new-section .image-content img {
+    max-width: 70%;
+    height: auto;
+    margin-left: 3rem;
+}
+
+@media (max-width: 768px) {
+    .new-section {
+        flex-direction: column;
+    }
+
+    .new-section .text-content {
+        padding-right: 0;
+        padding-bottom: 2rem;
+        font-size: 1rem;
+        order: 2
+    }
+
+    .new-section .image-content {
+        text-align: center;
+    }
+   
+}
