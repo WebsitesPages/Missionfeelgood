@@ -301,7 +301,8 @@ display: none;
 
 @media (max-width: 600px) {
     .banner1 h1 {
-        font-size: 1.7rem;
+        font-size: 1.2rem;
+      padding: 2rem;
         
     }
     .banner1 img {
