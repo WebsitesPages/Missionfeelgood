@@ -553,6 +553,7 @@ footer{
     height: 400px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center top; /* Fügt das Bild nach unten */
     margin-bottom: 1rem;
 }
 
@@ -750,4 +751,64 @@ footer{
         text-align: center;
     }
    
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+.custom-button {
+    display: inline-block;
+    background-color: #7c6767;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.custom-button:hover {
+    background-color: #5a4848;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.services-container {
+    background-color: #e2c9c2;
+    border: 1px solid #5a4848;;
+    padding: 2rem;
+    border-radius: 5px;
+    margin: 2rem 0;
+    line-height: 1.6;
+}
+
+.services-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.services-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services-container li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid black;
+}
+
+.services-container li:last-child {
+    font-weight: bold;
+    color: #482a21;
 }
