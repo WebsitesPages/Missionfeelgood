@@ -284,9 +284,11 @@ display: none;
 
         text-align: center;
     }
-    .banner1 h2 {
-        font-size: 1.5rem;
-        margin-bottom: 20px; 
+    .banner1 h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        line-height: 1.7;
+        color: #482a21; 
     }
     .banner1 p {
         font-size: 1.3em;
@@ -301,7 +303,7 @@ display: none;
 
 @media (max-width: 600px) {
     .banner1 h1 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         padding: 2rem 0rem;
         text-align: center;
     }
