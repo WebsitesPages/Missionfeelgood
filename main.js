@@ -81,3 +81,33 @@ window.addEventListener('scroll', function () {
 
 
 
+
+
+
+// Die Optionen für den Intersection Observer
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.20
+};
+
+// Der Callback für den Intersection Observer
+let callback = (entries, observer) => {
+    entries.forEach(entry => {
+        // Wenn das Element zu mindestens 20% sichtbar ist
+        if (entry.isIntersecting) {
+            // Füge die Klasse "visible" hinzu
+            entry.target.classList.add('visible');
+            // Das Element muss nicht weiter beobachtet werden, also entferne es vom Observer
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+// Erstelle den Intersection Observer
+let observer = new IntersectionObserver(callback, options);
+
+// Beobachte alle Elemente mit der Klasse "obser"
+document.querySelectorAll('.obser').forEach(elem => {
+    observer.observe(elem);
+});

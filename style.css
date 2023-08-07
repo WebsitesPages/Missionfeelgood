@@ -852,3 +852,10 @@ footer{
 }
 
 
+.obser {
+    opacity: 0;
+    transition: opacity 2s; /* Einblendungsdauer 1 Sekunde */
+}
+.visible {
+    opacity: 1 !important;
+}
