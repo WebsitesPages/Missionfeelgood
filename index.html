@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+     <!-- <link rel="stylesheet" href="style.css">-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">  
@@ -171,15 +171,237 @@
             </div>
         </div>
     </footer> -->
-    <div class="banner2" style="height: 100vh;">
-        <h1 style="font-size: 2.8rem">Missionabnehmen</h1>
-        <p style="font-size: 2.3rem; max-width: 80%; text-align: center; padding-bottom: 3rem;">Wir bauen für Sie um!<br><br> Unsere Webseite wird derzeit aktualisiert und ist bald wieder für Sie erreichbar!</p>
+   
 
-        <div class="social-links">
-            <a style="font-size: 3rem;" href="https://www.facebook.com/Missionrauchfrei/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" ></i></a>
-                <a style="font-size: 3rem;" href="https://www.instagram.com/missionabnehmen.de/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+
+
+    
+
+    <div class="container">
+        <h1>MISSIONRAUCHFREI</h1>
+        <h2>HYPNOSE, die verändert.</h2>
+        <div class="box">
+            <a href="http://missionfeelgood.rf.gd/bookingkennenlerncallrauchfrei.html">Kostenfreier Kennenlerncall</a>
+            <a href="https://www.missionrauchfrei.de">Zur Homepage</a>
+            <a href="https://www.missionrauchfrei.de/missionrauchfrei/">Zur Hypnose</a>
+            <a href="http://missionfeelgood.rf.gd/bookingrauchfrei.html">Termin Buchen</a>
         </div>
     </div>
+
+    <style>
+    *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #c1aba5;
+    color: white;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    height: 100vh;
+    background-size: cover;
+}
+
+h1 {
+    padding-top: 5rem;
+    font-size: 2rem;
+    line-height: .1;
+}
+h2{
+   font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.box {
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 50px;
+
+}
+.box a {
+    text-align: center;
+    display: block; /* Damit der Link die gesamte Breite des Containers einnimmt */
+}
+a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Für Tablets */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        color: black;
+    }
+    h2{
+        font-size: 2rem;
+        color: black;
+     }
+    .box {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Für Desktop */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+        color: black;
+    }
+    h2{
+        font-size: 3rem;
+        color: black;
+     }
+    .box {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Für Handys */
+@media (max-width: 767px) {
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25)), url('Carina.jpg');
+        background-size: cover; /* Das Bild wird so skaliert, dass es den gesamten Container füllt */
+        background-repeat: no-repeat; /* Das Bild wird nicht wiederholt */
+        background-position: center center;
+    }
+
+}
+
+/* Verstecken Sie die Elemente zu Beginn */
+h1, h2, .box, .box > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Klasse, die später mit JavaScript hinzugefügt wird, um die Elemente sichtbar zu machen */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.5s;
+}
+
+/* a.show-underline::after {
+    width: 100%;
+} */
+
+a:hover {
+    transform: translateY(-5px) scale(1.05); /* leicht nach oben bewegen und vergrößern */
+    transition: transform 0.3s; /* sanfte Animation */
+}
+
+
+
+footer{
+    background-color: #c1aba5;
+    font-family: 'Montserrat', Arial, sans-serif;
+    
+}
+.container1 {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.footer-links ul li a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1rem; 
+}
+.footer-links a:hover {
+    color: #524946;
+    transition: .5s;
+}
+.social-links a {
+    font-size: 24px;
+    margin: 10px 20px;
+    color: inherit;
+    transition: all 0.5s ease;
+    display: inline-block;
+
+}
+
+.social-links :hover {
+    scale: 1.3;
+    transition: .5s;
+}
+.social-links h4:hover{
+    scale: 1;
+}
+
+.social-links {
+        margin-bottom: 30px;
+    }
+@media (min-width: 768px) {
+    .footer-links ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    
+}
+        
+    </style>
+
+
     
     
 
