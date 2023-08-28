@@ -414,15 +414,11 @@ window.addEventListener('DOMContentLoaded', function() {
       h2.classList.add('show');
       setTimeout(() => {
         box.classList.add('show');
+        links.forEach((link) => {
+          link.classList.add('show');
+        });
         setTimeout(() => {
-          links.forEach((link, index) => {
-            setTimeout(() => {
-              link.classList.add('show');
-            }, index * 500);
-          });
-          setTimeout(() => {
-            container1.classList.add('show');
-          }, links.length * 500 + 500);
+          container1.classList.add('show');
         }, 500);
       }, 500);
     }, 500);
