@@ -376,8 +376,9 @@ display: none;
 }
 @media (max-width: 400px) {
     .banner3 h1 {
-        font-size: 1.5rem !important;
-        padding: 2rem 0rem;
+        font-size: 9vw !important;
+    
+        padding: 2rem 1rem !important;
         text-align: center;
 
     }
